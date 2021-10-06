@@ -128,7 +128,7 @@ console.log(removeLastFlavor(originalFlavors))
 Write a function that returns a flavor at a given index in the array.
 
 Use the getFlavorByIndex function below to do the following:
-  1. Recieve an array
+  1. Receive an array
   2. Receive a number (the desired index)
   3. Return the flavor located at the received index position
 
@@ -137,15 +137,12 @@ Use the getFlavorByIndex function below to do the following:
 // two parameters. array and index. return array[i]
 function getFlavorByIndex(array, index){
   for(let i=0; i<array.length; i++){
-    if(array[i].includes(index)){
-      array.splice(i,1);
-    }
+    return array[index];
   }
-  /*your code here*/
-  return array
 }
-console.log(getFlavorByIndex(originalFlavors, 'Coffee'))
-// console.log(getFlavorByIndex(originalFlavors, 'Coffee'))
+
+// console.log(getFlavorByIndex(originalFlavors, 2)
+  
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -161,21 +158,17 @@ Use the removeFlavorByName function below to do the following:
 
   HINT: You can use .splice() for this
 */
-// two parameters array,string. loop thru the array. check if string is at the index. if it is = remove. looking for exact match. NOTE CHANGE PUSH TO REMOVE. THIS IS FOR TASK 7
-function removeFlavorByName(array, string){
-  /*your code here*/
-  let filteredArray = [];
-  // const str = string;
-  const str2 = string.charAt(0).toUpperCase() + string.slice(1);
-  // console.log(str2)
+// two parameters array,string. loop thru the array. check if string is at the index. if it is = remove. looking for exact match. 
+function removeFlavorByName(array, index){
   for(let i=0; i<array.length; i++){
-    if(array[i].includes(str2)){
-      filteredArray.push(array[i]);
+    if(array[i]===index){
+      array.splice(i,1);
     }
   }
-  return filteredArray;
+  return array;
 }
-console.log(removeFlavorByName(originalFlavors,'chocolate'))
+
+console.log(removeFlavorByName('task6',originalFlavors, 'Peach'))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
